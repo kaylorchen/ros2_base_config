@@ -1,0 +1,52 @@
+libgstreamer-plugins-base1.0-0:
+  ubuntu: libgstreamer-plugins-base1.0-0
+libgstreamer1.0-0:
+  ubuntu: libgstreamer1.0-0
+gstreamer1.0-plugins-bad:
+  ubuntu: gstreamer1.0-plugins-bad
+gstreamer1.0-vaapi:
+  ubuntu: gstreamer1.0-vaapi
+gstreamer1.0-plugins-base:
+  ubuntu: gstreamer1.0-plugins-base
+gstreamer1.0-plugins-good:
+  ubuntu: gstreamer1.0-plugins-good
+kaylordut:
+  ubuntu: kaylordut-dev
+nlohmann-json3-dev:
+  ubuntu: nlohmann-json3-dev
+livox_ros_driver2:
+  ubuntu: ros-humble-livox-ros-driver2
+ros2_livox_simulation:
+  ubuntu: ros-humble-ros2-livox-simulation
+liblivox-sdk2-dev:
+  ubuntu: liblivox-sdk2-dev
+linefit_ground_segmentation:
+  ubuntu: ros-humble-linefit-ground-segmentation
+hunter_imu_complementary_filter:
+  ubuntu: ros-humble-hunter-imu-complementary-filter
+linefit_ground_segmentation_ros:
+  ubuntu: ros-humble-linefit-ground-segmentation-ros
+hunter_pointcloud_to_laserscan:
+  ubuntu: ros-humble-hunter-pointcloud-to-laserscan
+costmap_converter_msgs:
+  ubuntu: ros-humble-costmap-converter-msgs
+costmap_converter:
+  ubuntu: ros-humble-costmap-converter
+teb_msgs:
+  ubuntu: ros-humble-teb-msgs
+fast_lio:
+  ubuntu: ros-humble-fast-lio
+ugv_sdk:
+  ubuntu: ros-humble-ugv-sdk
+scout_msgs:
+  ubuntu: ros-humble-ugv-sdk
+unitree_api:
+  ubuntu: ros-humble-unitree-api
+unitree_go:
+  ubuntu: ros-humble-unitree-go
+unitree_hg:
+  ubuntu: ros-humble-unitree-hg
+unitree_ros2_example:
+  ubuntu: ros-humble-unitree-ros2-example
+go2_description:
+  ubuntu: ros-humble-go2-description

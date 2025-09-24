@@ -1,0 +1,11 @@
+#!/bin/bash
+source /opt/ros/humble/setup.bash
+if [ ! -f "debian/links" ]; then
+  pkg=$(head -n 1 debian/changelog | grep ros-humble | awk '{print $1}')
+  if [ "$pkg" ]; then
+    echo this is a ros package and name is $pkg
+    echo "/etc/ros/dds/service-environment.conf /lib/systemd/system/${pkg}.service.d/00-service-environment.conf" > debian/links
+  fi
+fi
+DEB_BUILD_OPTIONS=parallel=15 fakeroot debian/rules binary
+
