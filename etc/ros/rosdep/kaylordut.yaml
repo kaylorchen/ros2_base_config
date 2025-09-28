@@ -50,3 +50,5 @@ unitree_ros2_example:
   ubuntu: ros-humble-unitree-ros2-example
 go2_description:
   ubuntu: ros-humble-go2-description
+liblivox_sdk2_dev:
+  ubuntu: liblivox-sdk2-dev
