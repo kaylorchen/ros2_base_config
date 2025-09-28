@@ -1,6 +1,24 @@
 #!/bin/bash
+# 获取当前分支名并赋值给 CURRENT_BRANCH
+get_current_branch() {
+    # 1. 优先尝试从 GITHUB_REF_NAME 环境变量获取
+    if [ -n "$GITHUB_REF_NAME" ]; then
+        echo "$GITHUB_REF_NAME"
+        return
+    fi
+
+    # 2. 如果不在 GitHub Actions 环境，则使用 git 命令获取
+    if branch=$(git symbolic-ref --short HEAD 2>/dev/null); then
+        echo "$branch"
+    else
+        echo "ERROR: 无法获取当前分支名！" >&2
+        exit 1
+    fi
+}
+
 source /opt/ros/humble/setup.bash
-VERSION=$(git describe --tags --long).$(TZ="Asia/Shanghai" date +"%Y%m%d.%H%M%S").$( lsb_release -c | awk '{print $2}')
+CURRENT_BRANCH=$(get_current_branch)
+VERSION=$(git describe --tags --long).${CURRENT_BRANCH}.$(TZ="Asia/Shanghai" date +"%Y%m%d.%H%M%S").$( lsb_release -c | awk '{print $2}')
 VERSION=$(echo ${VERSION} | tr _ -)
 dch -b -v ${VERSION} $(git log -n 1 --pretty=format:"%s")
 echo "VERSION is ${VERSION}"
