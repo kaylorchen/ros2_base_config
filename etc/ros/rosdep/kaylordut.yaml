@@ -52,3 +52,5 @@ go2_description:
   ubuntu: ros-humble-go2-description
 liblivox_sdk2_dev:
   ubuntu: liblivox-sdk2-dev
+point_lio:
+  ubuntu: ros-humble-point-lio
